@@ -43,6 +43,7 @@ public class GeneralGobInfo extends GobInfo {
 	POS.put("gfx/terobjs/barrel", 6);
 	POS.put("gfx/terobjs/iconsign", 5);
 	POS.put("gfx/terobjs/cheeserack", 17);
+	POS.put("gfx/invobjs/parchment-decal", 18);
     }
 
     protected GeneralGobInfo(Gob owner) {
@@ -102,6 +103,14 @@ public class GeneralGobInfo extends GobInfo {
 		    text = ClientUtils.prettyResName(name);
 		}
 	    }
+	    
+	    //if(GobInfoOpts.enabled(InfoPart.CHEESE_RACK) && res.startsWith("gfx/invobjs/parchment-decal")) {
+		//if(name.startsWith("gfx/invobjs/parchment-decal-")) {
+		//    name = !ol.name()
+		//    name = name.substring(name.lastIndexOf("-") + 1);
+		//    text = ClientUtils.prettyResName(name);
+		//}
+	    //}
 	    
 	    if(text != null) {
 		spr.setTex2d(combine(text(text, BARREL_COL).img));
